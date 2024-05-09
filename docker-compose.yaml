@@ -1,0 +1,9 @@
+services:
+  express-server-1:
+    build: .
+    ports:
+      - "8000:8000"
+  express-server-2:
+    build: ./another_app
+    ports:
+      - "3000:3000"
