@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: backendAndFrontend
+  name: hello-world
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: backendAndFrontend
+  template:
+    metadata:
+      labels:
+        app: backendAndFrontend
+    spec:
+      containers:
+        - image: test-image
+          name: test-image-container
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8000
+        - image: another_app
+          name: another-app-container
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 3000

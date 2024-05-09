@@ -12,7 +12,7 @@
 
 # To run the docker image in kube cluster
 
-## `kubectl apply -f deployment.yaml`
+## `kubectl apply -f kubernetesDeployment.yaml`
 
 # Get all deployments
 
@@ -20,7 +20,7 @@
 
 # delete deployment
 
-## `kubectl delete deployment <deployment-name>`
+## `kubectl delete deployment hello-world`
 
 # List running containers
 
@@ -29,3 +29,15 @@
 # Delete pod in namespace
 
 ## `kubectl delete pods --all -n <namespace>`
+
+# Get all services
+
+## `kubectl get services --all-namespaces`
+
+# Delete service
+
+## `kubectl delete service <SERVICE_NAME>`
+
+# load local docker image to kubernetes cluster
+
+## ` kind create cluster --config kindconfig.yaml --image test-image:v1 --name testing1`

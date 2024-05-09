@@ -1,0 +1,3 @@
+./kubernetesCleanUp.sh
+
+./kubernetesStart.sh
